@@ -45,6 +45,7 @@ jobs:
         echo "C:\Program Files\OpenCppCoverage" >> $env:GITHUB_PATH
 
     - name: Generate Coverage Report
+      shell: cmd
       run: OpenCppCoverage --sources winci --export_type cobertura:winci.xml -- "vstest.console.exe" x64\Release\winci.exe
 
     - name: Upload Report to Codecov
