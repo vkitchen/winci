@@ -46,7 +46,7 @@ jobs:
 
     - name: Generate Coverage Report
       shell: cmd
-      run: OpenCppCoverage --sources winci --export_type cobertura:winci.xml -- "vstest.console.exe" x64\Release\winci.exe
+      run: OpenCppCoverage --sources winci --export_type cobertura:winci.xml -- x64\Release\winci.exe
 
     - name: Upload Report to Codecov
       uses: codecov/codecov-action@v2
